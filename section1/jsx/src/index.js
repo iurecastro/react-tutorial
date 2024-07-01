@@ -14,10 +14,19 @@ const App = () => {
 
   const type = 'range';
 
+  const btnVar = {
+    backgroundColor:"#000",
+    minWidth:80,
+    color:"#dedede"
+
+  };
+
   return (
- //use div or <> empty JSX element </> to wrap  elements 
+//use div or <> empty JSX element </> to wrap  elements 
 //Ternary operator <li>Status: {active ? 'Active' : ''}</li>
-  //to access variable use {variable_name}
+//to access variable use {variable_name}
+// first button add css inline 
+//second button add css by props 
   <>
   <div>
     <h1>Hello, JSX!</h1>
@@ -36,21 +45,24 @@ const App = () => {
 <div>
   <form>
       <div>
-        <label>Event Name:</label>
+        <label htmlFor='eventName'>Event Name:</label>
         <input type="text" name="eventName" />
       </div>
       <div>
-        <label>Event Date:</label>
+        <label htmlFor='date'>Event Date:</label>
         <input type="date" name="date" />
       </div>
-      <button type="submit">Submit</button>
+      <div>
+        <label htmlFor='zoom'>Zoom Level:</label>
+        <input name="zoom" id="zoom" type={type} min="0" max="100" />
+      </div>
+      
+      <button className='btn' style={{backgroundColor:'#F9DC5C',border:'None', display: 'inline-block',minWidth: '80px', padding: '0.25rem 0.75rem', }} type="submit">Submit</button>
+      <button className='btn' style={btnVar} type="submit">Submit 2</button>
   </form>
 </div>
 
-<div>
-  <label>Zoom Level:</label>
-  <input name="zoom" id="zoom" type={type} min="0" max="100" />
-</div>
+
 
 
   </>
