@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
-  background:linear-gradient(90deg, whitesmoke 0%, #2e2e2e 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100);
 
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -18,12 +21,15 @@ body {
   margin: 0 auto;
   min-height: 100vh;
 }
+
 h1 {
   font-weight: normal;
   font-size: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 1rem;
+  text-align: center;
 }
+
 h1 span {
   display: block;
   font-size: 0.8rem;
@@ -31,13 +37,28 @@ h1 span {
   margin-left: 3px;
   margin-top: 0.2rem;
 }
+
 .main {
   max-width: 500px;
   min-width: 400px;
   background-color: black;
-  color: #f1f1f1;
+  color: black;
   padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 0px;
+
+
+
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
+
 .todo-list {
   list-style-type: none;
   overflow-y: auto;
@@ -45,6 +66,7 @@ h1 span {
   scrollbar-color: #333 #dedede;
   scrollbar-width: thin;
 }
+
 .todo {
   display: flex;
   justify-content: space-between;
@@ -54,6 +76,7 @@ h1 span {
   cursor: pointer;
   user-select: none;
 }
+
 .actions {
   display: flex;
   gap: 1rem;
@@ -70,6 +93,11 @@ button {
   padding: 0.25rem;
   border: none;
   color: #fff;
+
+}
+
+svg:hover {
+  fill: red;
 }
 
 input {
@@ -81,6 +109,7 @@ input {
 .todo-create {
   margin-top: 1.5rem;
 }
+
 .todo-edit {
   display: flex;
   justify-content: space-between;
@@ -91,4 +120,9 @@ input {
 
 .completed {
   text-decoration: line-through;
+}
+
+
+#linkWebSite {
+  color: black;
 }

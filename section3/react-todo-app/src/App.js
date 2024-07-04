@@ -1,5 +1,6 @@
 import TodoList from './components/TodoList';
 import TodoCreate from './components/TodoCreate';
+import Footer from './components/Footer';
 import './App.css';
 import { useState } from 'react';
 
@@ -29,14 +30,20 @@ const App = () => {
   };
 
   return (
+    <>
     <main className="main">
       <h1>
-        React Todo <span>Streamline Your Day, the React Way!</span>
+        React Todo <span>- Todo react app -</span>
       </h1>
       <TodoList todos={todos} removeTodo={removeTodo} changeTodo={changeTodo} />
       <TodoCreate createTodo={createTodo} />
+      <Footer />
     </main>
+    
+    </>
   );
+
+
 };
 
 export default App;
