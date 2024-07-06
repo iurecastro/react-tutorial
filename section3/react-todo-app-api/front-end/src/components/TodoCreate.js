@@ -19,7 +19,7 @@ const TodoCreate = ({ createTodo }) => {
         type="text"
         name="todo"
         id="todo"
-        placeholder="Enter a todo"
+        placeholder="Enter a task"
         value={todo}
         onChange={handleChange}
       />
